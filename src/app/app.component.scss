@@ -1,0 +1,36 @@
+/* Wrapper for the sidebar and content */
+.wrapper {
+  display: flex;
+  height: 100vh; /* Full-height layout */
+}
+
+/* Sidebar */
+app-sidebar {
+  width: 250px;
+  background-color: #343a40;
+  height: 100%; /* Full height for the sidebar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Keep sidebar on top */
+}
+
+/* Content area */
+.content-area {
+  margin-left: 250px; /* Matches the width of the sidebar */
+  width: calc(100% - 250px); /* Take up the remaining space */
+  padding: 20px;
+  background-color: #f4f7f9;
+  overflow-y: auto;
+}
+
+/* Responsive: adjust for mobile screens */
+@media (max-width: 768px) {
+  app-sidebar {
+    width: 200px; /* Smaller sidebar for mobile */
+  }
+  .content-area {
+    margin-left: 200px; /* Adjust margin for smaller sidebar */
+    width: calc(100% - 200px);
+  }
+}
